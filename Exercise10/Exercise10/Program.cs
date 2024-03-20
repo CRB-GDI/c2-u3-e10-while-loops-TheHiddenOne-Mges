@@ -11,6 +11,7 @@
             while (menuChoice != 4)
             {
                 // The Menu
+                Console.WriteLine("");
                 Console.WriteLine("*****************");
                 Console.WriteLine("Menu :");
                 Console.WriteLine("1- Start New Save");
@@ -18,16 +19,23 @@
                 Console.WriteLine("3- Options");
                 Console.WriteLine("4- Quit");
                 Console.WriteLine("*****************");
+                Console.WriteLine("");
+               
                 //Where the user input modifies the value of menuChoice.
+              
                 menuChoice = int.Parse(Console.ReadLine());
+                
                 // Prevents the allowcation of an invalid paramater
-                if (menuChoice <= 0 || menuChoice >= 5)
+              
+                while (menuChoice <= 0 || menuChoice >= 5)
                 {
                     Console.WriteLine("Please Insert a Valid Option");
                     menuChoice = int.Parse(Console.ReadLine());
                 }
+               
                 //Actual results for the menu
-                else if (menuChoice == 4)
+               
+                if (menuChoice == 4)
                 {
                     Console.WriteLine("Closing Program...");
                 }
